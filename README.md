@@ -1,0 +1,5 @@
+- update .env
+- start doris: "docker compose up"
+- access mysql: "mysql  -h 127.0.0.1 -P9030 -uroot"
+- run all sql from the file: script.sql
+- run all curl commands from: load.sh

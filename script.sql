@@ -1,7 +1,3 @@
-echo $HOSTNAME
-
-mysql  -h 127.0.0.1 -P9030 -uroot
-
 
 CREATE USER 'test' IDENTIFIED BY 'test_passwd';
 CREATE DATABASE example_db;
@@ -37,8 +33,6 @@ PARTITION BY RANGE(event_day)
 )
 DISTRIBUTED BY HASH(siteid) BUCKETS 10
 PROPERTIES("replication_num" = "1");
-
-
 
 SELECT * FROM table1 LIMIT 3;
 SELECT SUM(table1.pv) FROM table1 JOIN table2 WHERE table1.siteid = table2.siteid;
