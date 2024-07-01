@@ -1,0 +1,2 @@
+curl --location-trusted -u test:test_passwd -H "label:table2_20170707" -H "column_separator:|" -H "Expect: 100-continue" -T table2_data http://localhost:8030/api/example_db/table2/_stream_load
+curl --location-trusted -u test:test_passwd -H "label:table1_20170707" -H "column_separator:," -H "Expect: 100-continue" -T table1_data http://localhost:8030/api/example_db/table1/_stream_load
